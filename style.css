@@ -90,3 +90,31 @@ body{
             height: 100%;
             background: rgb(41, 41, 235);
         }
+
+        @media screen and (max-width: 500px) {
+            .container{
+                padding: 10px 60px;
+            }
+            .display p{
+                font-size: 40px;
+            }
+            .display {
+                height: 80px;
+            }
+            .buttons{
+                display: flex;
+                justify-content: center;
+                width: auto;
+                margin-top: 10px;
+            }
+            .nums li{
+                padding: 13px 16px;
+            }
+
+            .operations li{
+                padding: 13px 13px;
+            }
+            li{
+                font-size: 25px;
+            }
+        }
