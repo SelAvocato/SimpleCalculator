@@ -27,6 +27,14 @@ const checkNull = () => {
 
 let newDisplay = display.textContent;
 
+function playDisplayAnim() {
+    display.classList.remove("displayAnimation");
+    void display.offsetWidth;
+    display.classList.add("displayAnimation");
+}
+
+const li = document.querySelectorAll("li").forEach(btn => {btn.addEventListener("click", playDisplayAnim)})
+
 function useNums(num){
     if(newDisplay == "0"){
         newDisplay = null;

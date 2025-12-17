@@ -13,7 +13,23 @@ li{
     font-size: 40px;
     font-weight: 400;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 13px 6px;
+    transition: transform 0.2s ease;
 }
+    .operations li:hover{
+        color: lightgray
+    }
+    .nums li:hover{
+        color: red;
+    }
+    li:active{
+        transform: scale(1.2) translateY(-1.5rem);
+    }
 
 
 body{
@@ -51,6 +67,20 @@ body{
         margin: 0px;
         margin-left: auto;
     }
+    .displayAnimation{
+        animation: dAnim 0.2s ease-in-out ;
+    }
+    @keyframes dAnim{
+        0%{
+            transform: translateY(0rem);
+        } 
+        50%{
+            transform: translateY(-0.5rem);
+        }
+        100%{
+            transform: translateY(0rem);
+        }
+    }
 
 .buttons{
     display: flex;
@@ -67,14 +97,6 @@ body{
         color: blue;
         font-weight: bold;
     }
-        li{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid gray;
-            border-radius: 3px;
-            padding: 13px 6px;
-        }
 
     .operations{
         flex: 4;
