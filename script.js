@@ -135,19 +135,36 @@ divide.addEventListener("click", function(){
     checkOperation("÷") 
 });
 
+const isLongValue = total => {
+    total = eval(display.textContent);
+    if(total.toString().includes(".")){
+        let valueString = total.toString().split(".");
+        let decimalCount = valueString[1].length;
+        if(decimalCount > 5){
+            newDisplay = eval(display.textContent).toFixed(5);
+            display.textContent = newDisplay;
+        }
+        else{
+            newDisplay = eval(display.textContent);  
+            display.textContent = newDisplay;
+        }
+    }
+    else{
+        newDisplay = eval(display.textContent);  
+        display.textContent = newDisplay;
+    }
+}
 equal.addEventListener("click", function(){
     if(operations.includes(display.textContent.at(-1))){
         display.textContent = display.textContent.slice(0, -1);
         display.textContent = display.textContent.replace("X", "*")
         display.textContent = display.textContent.replace("÷", "/")
-        newDisplay = eval(display.textContent).toFixed(2);
-        display.textContent = newDisplay;
+        isLongValue(newDisplay);
     }
     else{
         display.textContent = display.textContent.replace("X", "*")
         display.textContent = display.textContent.replace("÷", "/")
-        newDisplay = eval(display.textContent).toFixed(2);
-        display.textContent = newDisplay;
+        isLongValue(newDisplay);
     }
 })
 
