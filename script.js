@@ -1,14 +1,6 @@
-const display = document.getElementById("display");/*
-const btn1 = document.getElementById("1");
-const btn2 = document.getElementById("2");
-const btn3 = document.getElementById("3");
-const btn4 = document.getElementById("4");
-const btn5 = document.getElementById("5");
-const btn6 = document.getElementById("6");
-const btn7 = document.getElementById("7");
-const btn8 = document.getElementById("8");
-const btn9 = document.getElementById("9");
-const btn0 = document.getElementById("0");*/
+///////////////////////////////////////////////// HOPING TO IMPROVE THIS PLEASE SEND TIPS////////////////////////////////////////////////////
+
+const display = document.getElementById("display");
 const dot = document.getElementById(".");
 const clear = document.getElementById("clear");
 const equal = document.getElementById("equal");
@@ -47,47 +39,7 @@ function useNums(num){
         newDisplay = Number(display.textContent);
     }
 }
-/*
-btn1.addEventListener("click", function(){
-    useNums(1);
-});
 
-btn2.addEventListener("click", function(){
-    useNums(2);
-})
-
-btn3.addEventListener("click", function(){
-    useNums(3);
-})
-
-btn4.addEventListener("click", function(){
-    useNums(4);
-})
-
-btn5.addEventListener("click", function(){
-    useNums(5);
-})
-
-btn6.addEventListener("click", function(){
-    useNums(6);
-})
-
-btn7.addEventListener("click", function(){
-    useNums(7);
-})
-
-btn8.addEventListener("click", function(){
-    useNums(8);
-})
-
-btn9.addEventListener("click", function(){
-    useNums(9);
-})
-
-btn0.addEventListener("click", function(){
-    useNums(0);
-})
-*/
 dot.addEventListener("click", function(){
     if(operations.includes(display.textContent.at(-1))){
         display.textContent += "0.";
@@ -162,6 +114,7 @@ const isLongValue = total => {
         display.textContent = newDisplay;
     }
 }
+
 equal.addEventListener("click", function(){
     if(operations.includes(display.textContent.at(-1))){
         display.textContent = display.textContent.slice(0, -1);
